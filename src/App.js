@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import Home from './views/Home/';
+import Login from './views/Login/';
+import Details from './views/Details/';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HashRouter>
+        <Switch>
+          <Route path="/details" component={Details}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/" component={Home}></Route>
+        </Switch>
+      </HashRouter>
     );
   }
 }
