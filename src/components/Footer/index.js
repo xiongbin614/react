@@ -26,7 +26,6 @@ class Footer extends Component{
             <i>5</i>
             <span>我的</span>
           </NavLink>
-          <a href="#">55</a>
         </div>
         
       )
