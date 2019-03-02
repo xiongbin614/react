@@ -22,11 +22,16 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	/* text-decoration: none; */
+	/* color: #333; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+*{
+	box-sizing: border-box;
 }
 html{
   height: 100%;
