@@ -34,10 +34,13 @@ footer, header, hgroup, menu, nav, section {
 	box-sizing: border-box;
 }
 html{
-  height: 100%;
+	height: 100%;
+	/* width: 640px; */
 }
 body {
-  height: 100%;
+	height: 100%;
+	/* margin: auto; */
+	/* width: 750px; */
 	line-height: 1;
 }
 ol, ul {
@@ -54,4 +57,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+#root{
+	height: 100%;
 }

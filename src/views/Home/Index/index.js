@@ -1,31 +1,47 @@
 import React from 'react';
 import './index.less';
-import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
-
+import {  Route, NavLink, Switch } from 'react-router-dom';
+import indexConent from './Common/Tuijian/ui.jsx';
+import Huawei from './Common/Huawei/ui.jsx';
+// import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 
 class Index extends React.Component{
   render(){
     return(
       <div className="index">
-      {/* 顶部搜索 */}
         <div className="i-header">
-          <img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/logo/logo_vmall.png" alt="" />
-          <div className="search">
-            <i className="iconsearch iconfont"></i>
-            <div className="keys">5555</div>
+      {/* 顶部搜索 */}
+          <div className="i-head">
+            <img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/logo/logo_vmall.png" alt="" />
+            <div className="search">
+              <i className="iconsearch iconfont"></i>
+              <div className="keys">5555</div>
+            </div>
+            <i className="iconfont iconxiaoxi"></i>
+            <span>登录</span>
           </div>
-          <i className="iconfont iconxiaoxi"></i>
-          <span>登录</span>
+          {/* 顶部导航 */}
+          <div className="i-nav">
+            <NavLink exact  to="/index">推荐</NavLink >
+            <NavLink to="/index/huawei">华为</NavLink >
+            <NavLink to="/index/honor">荣耀</NavLink >
+            <NavLink to="/index/honornew">新品</NavLink >
+            <NavLink to="/index/digital">数码惠</NavLink>
+          </div>
         </div>
-        {/* 顶部导航 */}
-        <ul className="i-nav">
-          <li>推荐</li>
-          <li>华为</li>
-          <li>荣耀</li>
-          <li>新品</li>
-          <li>数码惠</li>
-        </ul>
-        
+        {/* 主要内容 */}
+        <div className="i-main">
+          <div className="m-conent">
+            {/* 放置路由 */}
+              <Switch>
+                  <Route path='/index/:id' component={Huawei} ></Route>
+                  <Route path='/index' component={indexConent} ></Route>
+                 {/* < Route exact path="/" render={() => <Redirect to="/index" />} /> */}
+                  {/* <Route path='/'  component={indexConent} ></Route> */}
+
+              </Switch>
+          </div>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+// import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './index.less';
 class Footer extends Component {

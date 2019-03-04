@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import {  HashRouter, Route,  Switch } from 'react-router-dom';
 import Home from './views/Home/';
 import Login from './views/Login/';
 import Details from './views/Details/';

@@ -6,51 +6,70 @@
   // justify-content: space-around;
   // align-items: center;
   .i-header{
-    height: 42px;
-    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-      img{
-        height: 13px;
-        width: 64px;
-      }
-      .search{
-        height: 34px;
-        width: 200px;
+    flex-direction: column;
+    height: 77px;
+    width: 100%;
+          .i-head{
+        height: 42px;
+        width: 100%;
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        background: #ccc;
-        border-radius: 5px;
-        padding-left: 8px;
-        i{
-          font-size: 20px;
-          margin-right: 10px;
+          img{
+            height: 13px;
+            width: 64px;
+          }
+          .search{
+            height: 30px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            background: #ccc;
+            border-radius: 5px;
+            padding-left: 8px;
+            i{
+              font-size: 20px;
+              margin-right: 10px;
+            }
+          }
+          i{
+            font-size: 25px;
+          }
+          span{
+            font-size: 14px;
+          }
+      }
+      .i-nav{
+        height: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        a{
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          min-width: 60px;
+          align-items: center;
+          font-size: 14px;
+          color: #777;
+          text-decoration: none;
+        }
+        .active{
+          color: #cc0e11;
         }
       }
-      i{
-        font-size: 25px;
-      }
-      span{
-        font-size: 14px;
-      }
   }
-  .i-nav{
-    height: 35px;
+  .i-main{
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    li{
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      min-width: 60px;
-      align-items: center;
-      font-size: 14px;
-      color: #777;
+    // margin-bottom: 52px;
+    overflow: auto;
+    .m-conent{
+      width: 100%;
+      min-height: auto;
     }
   }
 

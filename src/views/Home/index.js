@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import {  HashRouter, Route,  Switch, Redirect } from 'react-router-dom';
 
 import React, { Component } from 'react';
 import './index.less';
@@ -12,6 +12,7 @@ class Home extends Component{
   render () {
       return (
         <div className='home'>
+          <div className="homeShow">
         <HashRouter>
           <Switch>
             <Route path="/cart" component={Cart}></Route>
@@ -19,9 +20,10 @@ class Home extends Component{
             <Route path="/classify" component={Classify}></Route>
             <Route path="/find" component={Find}></Route>
             < Route exact path="/" render={() => <Redirect to="/index" />} />
-            <Route path="/" component={Index}></Route>
+                <Route path="/"  component={Index}></Route>
           </Switch>
         </HashRouter> 
+          </div> 
           <Footer></Footer>
 
         </div>
