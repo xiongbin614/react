@@ -6,7 +6,7 @@ import './index.css';
 class Find extends React.Component{
   render(){
     return(
-      <div>
+      <div className="find">
           <div>find</div>
       </div>
     )

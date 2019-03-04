@@ -1,7 +1,8 @@
 import React from 'react';
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 import './ui.less';
-import Footer from '../../../../../components/ConentFooter/ui.jsx';
+import Footer from '@/components/ConentFooter/ui.jsx';
+import TjShow from './commons/ui.jsx';
 
 class IndexConent extends React.Component{
   render(){
@@ -9,7 +10,8 @@ class IndexConent extends React.Component{
     return (
       <div className="i-content">
           <div className="i-banner">
-            {this.props.match.params.id}
+              
+            {/* {this.props.match.params.id} */}
           </div>
           <div className="i-nav">
               <div className="i-navTop">
@@ -61,6 +63,53 @@ class IndexConent extends React.Component{
                <img src="https://res.vmallres.com/pimages//sale/2019-02/a6vzFsJYGKvZqUw0kBWb.jpg" alt=""/>
             </div>
           </div>
+          {/* 精品推荐 */}
+          <div className="i-tuijian">
+            <h2>精品推荐</h2>
+            <div className="i-tjShow">
+              <ul className="tj-info">
+                <li>
+                  <div className="tj-img">
+                    <span>热卖</span>
+                  <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt=""/>
+                    <p>11</p>
+                  </div>
+                  <p className="p-name">荣耀9</p>
+                  <p className="p-price">￥3200</p>
+                </li>
+              <li>
+                <div className="tj-img">
+                  <span>热卖</span>
+                  <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
+                  <p>11</p>
+                </div>
+                <p className="p-name">荣耀9</p>
+                <p className="p-price">￥3200</p>
+              </li>
+              <li>
+                <div className="tj-img">
+                  <span>热卖</span>
+                  <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
+                  <p>11</p>
+                </div>
+                <p className="p-name">荣耀9</p>
+                <p className="p-price">￥3200</p>
+              </li>
+              <li>
+                <div className="tj-img">
+                  <span>热卖</span>
+                  <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
+                  <p>11</p>
+                </div>
+                <p className="p-name">荣耀9</p>
+                <p className="p-price">￥3200</p>
+              </li>
+              </ul>
+            </div>
+          </div>
+        {/* 展示手机、电脑组件 */}
+        <TjShow></TjShow>
+        {/* 底部的关于我们 */}
         <Footer></Footer>
       </div>
     )
