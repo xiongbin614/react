@@ -39,24 +39,24 @@ class Find extends React.Component{
           </section>
 
           <div className="lzy-mian">
-            <div className="lzy-mian-t">
+          <div className="lzy-mian-t">
               <h1>商城头条 <a href="#">声明</a></h1>
               <div className="lm-nav">
                 <ul className="clearfix">
-                    <li><a href="#" className=""><img
+                    <li><a href="#"><img
                           src="https://res.vmallres.com/pimages/cop/20181122160831989/1542874111989.png"/></a></li>
-                    <li><a href="#" className=""><img
+                    <li><a href="#"><img
                           src="https://res.vmallres.com/pimages/cop/20181122160903197/1542874143197.jpg"/></a></li>
-                    <li><a href="#" className=""><img
+                    <li><a href="#"><img
                           src="https://res.vmallres.com/pimages/cop/20181122160844625/1542874124624.jpg"/></a></li>
-                    <li><a href="#" className=""><img
+                    <li><a href="#"><img
                           src="https://res.vmallres.com/pimages/cop/20181122160914273/1542874154273.png"/></a></li>
-                    <li><a href="#" className=""><img
+                    <li><a href="#"><img
                           src="https://res.vmallres.com/pimages/cop/20190121105041163/HbtXBNQW0tvbP6g9Xbo6.png"/></a></li>
                   </ul>
                 <div className="im-nav-xinwen">
                   <ul>
-                    <li><a>
+                    <li><a href="#">
                         <p className="p-img"><img src="https://res.vmallres.com/pimages//cop/20190304171541372/XIshT2guyP7qTZrNPo0q.jpg" />
                         </p>
                         <p className="p-name">斩获46项大奖！华为MWC2019圆满收官</p>
@@ -65,7 +65,7 @@ class Find extends React.Component{
                         <p className="p-other"><span>2019-03-04</span><i className="em">2474&nbsp;阅读</i></p>
                       </a>
                     </li>
-                    <li><a>
+                    <li><a href="#">
                         <p className="p-img"><img src="https://res.vmallres.com/pimages//cop/20190304164931658/VvQZbEPvgmzAMDVpN9Q3.jpg"/>
                         </p>
                         <p className="p-name">荣耀手机这9个实用功能，来看看你都学会了吗</p>
@@ -73,7 +73,7 @@ class Find extends React.Component{
                         <p className="p-other"><span>2019-03-04</span><i className="em">1904&nbsp;阅读</i></p></a>
                     </li>
 
-                      <li><a>
+                      <li><a href="#">
                           <p className="p-img"><img src="https://res.vmallres.com/pimages//cop/20190228102514645/zt1ZsuwKtyTuBoXiKMCn.jpg" />
                           </p>
                           <p className="p-name">MWC2019智慧新品发布丨外媒热评抢先看</p>
@@ -81,7 +81,7 @@ class Find extends React.Component{
                           <p className="p-other"><span>2019-03-01</span><i className="em">18034&nbsp;阅读</i></p>
                         </a></li>
 
-                      <li><a>
+                      <li><a href="#">
                           <p className="p-img"><img src="https://res.vmallres.com/pimages//cop/20190228214057644/j0kt7fDpjknpv6DZNVkP.jpg" />
                           </p>
                           <p className="p-name">喜报！华为Mate X与 Mate20 Pro喜提MWC2019大奖</p>
@@ -89,7 +89,7 @@ class Find extends React.Component{
                           <p className="p-other"><span>2019-02-28</span><i className="em">34976&nbsp;阅读</i></p>
                         </a></li>
 
-                      <li><a>
+                      <li><a href="#">
                           <p className="p-img"><img src="https://res.vmallres.com/pimages//cop/20190227184452162/MgX3IwbyZhMOFfWqmV1I.jpg"/>
                           </p>
                           <p className="p-name">速报！提高手机生产力的黑科技来了</p>
@@ -111,34 +111,36 @@ class Find extends React.Component{
               <h1>新摄汇</h1>
             </div>
             <div className="camera-floor ">
-              <div className="large"><a href="/content/camera/detail?id=2484" className=""><img
+              <div className="large"><a href="#"><img
                     src="https://res.vmallres.com/pimages/cop/20190201231150321/JzgL4qtdozKuzf3yharR.jpg" />
                   <p>来自 HUAWEI Mate 20 Pro</p>
                 </a></div>
-              <div className="small"><a href="/content/camera/detail?id=2500" className=""><img
+              <div className="small"><a href="#"><img
                     src="https://res.vmallres.com/pimages/cop/2019020123222175/SJTaXCfop1ASMM4PyltQ.jpg" />
                   <p>来自 HUAWEI Mate 20 Pro</p>
                 </a></div>
-              <div className="small"><a href="/content/camera/detail?id=2536" className=""><img
+              <div className="small"><a href="#"><img
                     src="https://res.vmallres.com/pimages/cop/20190201230704704/xcevPof2TEQAL00yJvzU.jpg" />
                   <p>来自 荣耀V20</p>
                 </a></div>
-              <div className="small"><a href="/content/camera/detail?id=2478" className=""><img
+              <div className="small"><a href="#"><img
                     src="https://res.vmallres.com/pimages/cop/20190201231454334/NlhkuF8TKkXmHhIKlRS1.jpg" />
                   <p>来自 HUAWEI Mate 20 Pro</p>
                 </a></div>
-              <div className="middle"><a href="/content/camera/detail?id=2540" className=""><img
+              <div className="middle"><a href="#"><img
                     src="https://res.vmallres.com/pimages/cop/20190201232533619/ZBW8TRUIlcN00GCwbXlO.jpg" />
                   <p>来自 荣耀V20</p>
                 </a></div>
-            </div><a href="#" className="">
+            </div>
               <div className="click-more"><a>发现更多新摄汇 ></a></div>
-            </a>
           </div>
 
-            <div className="lzy-mian-b">
+          <div className="lzy-mian-b">
 
-            </div>
+          </div>
+
+
+
           </div>
          </div>
     )
