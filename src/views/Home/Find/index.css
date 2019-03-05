@@ -1,0 +1,70 @@
+.lzy-app{
+  text-align: center;
+  width: 414px;
+  height:100%;
+}
+
+h1{
+  font-size: 24px;
+}
+.lzy-head{
+  height: 46px;
+  line-height: 46px;
+  position: fixed;
+  top:0;
+  width: 414px;
+  text-align: center;
+  background: #fff;
+
+}
+
+.lzy-head-mian {
+  height: 112px;
+  padding: 0 16px;
+  background-color: #fff;
+  margin-top: 46px;
+}
+
+.lzy-head-mian ul li{
+  display:block;
+  float: left;
+}
+.lzy-head-mian ul li a{
+display:inline-block;
+width: 75px;
+height: 112px;
+font-size: 18px;
+text-align: center;
+color: #000;
+padding: 20px 0;
+}
+.lzy-head-mian ul li a p{
+  margin-top: 4px;
+
+}
+.lzy-head-mian ul li a img{
+  width: 46px;
+  height: 46px;
+}
+.lzy-mian-t>h1{
+  height: 45px;
+  line-height: 45px;
+}
+.lm-nav{
+  width: 414px;
+  overflow-y: hidden;
+    overflow-x: auto;
+    margin-bottom: 7px;
+}
+.clearfix{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.clearfix li{
+  padding-left: 5px;
+}
+.clearfix li a img{
+  height: 58px;
+  width: 103px;
+}
