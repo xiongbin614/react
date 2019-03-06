@@ -1,9 +1,26 @@
 import React from 'react';
 import './index.css';
+import axios from 'axios';
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 
 
 class Find extends React.Component{
+    constructor(props){
+      super(props)
+      this.state={
+        data:[]
+      }
+    }
+    componentWillMount(){
+      axios.get('http://10.36.132.216:3005/getInfo/findInfo').then(data=>{
+        this.setState({
+          data:data.data[0].contentDetailList
+        })
+      })
+
+    }
+
+
   render(){
     return(
         <div className="lzy-app">
@@ -136,6 +153,23 @@ class Find extends React.Component{
           </div>
 
           <div className="lzy-mian-b">
+            <h1>口碑好货</h1>
+            <ul className="kbhh">
+              {this.state.data.map(item=>{
+                return(
+
+                <li key={item.id}>
+                  <div className="itemProdDetail">
+                  <a href="#">
+                    <p className="p-img"><img src={`https://res.vmallres.com/pimages/${item.thumbnail}`}/></p></a>
+                    <p className="p-name">{item.title}</p>
+                    <p className="p-promotion">{item.summary}</p>
+                    <p className="p-other"><span>2019-03-01</span><i className="em">{`来自${item.recommenderName}的推荐`}</i></p>
+                  </div>
+                </li>
+                )
+              })}
+              </ul>
 
           </div>
 

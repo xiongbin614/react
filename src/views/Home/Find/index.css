@@ -17,7 +17,7 @@ h1{
   width: 100%;
   text-align: center;
   background: #fff;
-
+  z-index: 9999;
 }
 
 .lzy-head-mian{
@@ -234,4 +234,31 @@ color: #000;
     display: table;
     margin: 0 auto;
     margin-bottom: 6px;
+}
+
+
+.itemProdDetail .p-other em {
+  padding-left: 1rem;
+  float: right;
+  font-size: 0.6rem;
+}
+
+.itemProdDetail .p-img img{
+  height:153px;
+  width: 100%;
+  padding: 0 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.kbhh{
+  margin-top: 10px;
 }
