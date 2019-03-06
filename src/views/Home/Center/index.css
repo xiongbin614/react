@@ -1,0 +1,253 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,th,td,input,textarea,form,fieldset,legend,img,select{
+	margin:0;
+	padding:0;
+	}
+body,html{
+	font:12px "Microsoft Yahei",Arial;	
+	color:#323c46;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+	font-weight:normal;
+	font-size:100%;	
+}
+i,em{
+	font-style:normal;	
+}
+li{
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+	color:#323c46;	
+}
+input{
+	outline:none;	
+}
+.clearfix{
+	*zoom:1;	
+}
+.center{
+    display: flex;
+    flex-direction: column;
+}
+.clearfix:after{
+	content:' ';
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;	
+}
+
+
+
+body{
+    background: #f9f9f9;
+}
+/* 头部 */
+.header{
+    height: 219px;
+    background: #e43430;
+    border-radius:0 0 50px 50px; 
+}
+.head-top{
+    height:50px;
+    background: #e43430;
+}
+.head-top img{
+    display: block;
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-top: 2px;
+}
+.head-main{
+    position: relative;
+    margin-top: 23px;
+    min-height:66px;
+    background: #e43430; 
+}
+.head-main img{
+    height: 53px;
+    width: 53px;
+    margin: 0 0 0 33px;
+}
+.head-main p{
+    float: left;
+    margin: 0 0 0 11px;
+    color: #fff;
+    font-size: 22px;
+}
+.head-main .p2{
+     display: block;
+     height: 22px;
+     width: 87px;
+     background: #cf322c;
+     position: absolute;
+     top:30px;
+     left: 100px;
+     font-size: 11px;
+     border-radius: 50px;
+}
+.head-main .p2 i{
+    display: block;
+    height: 22px;
+    width: 87px;
+    text-align: center;
+    margin-top: 4px;
+}
+.m-property{
+    /* position: absolute; */
+    width: 342px;
+    height: 68px;
+    margin-left: 9px;
+    /* top:166px; */
+    /* left:8px; */
+    background: #ffffff;
+    border-radius: 20px;
+} 
+.m-property ul{
+    
+    
+    
+    margin-left: 40px; 
+}
+.m-property ul li{
+    float: left;
+    width: 100px;
+    margin-top: 16px;
+}
+.m-property ul li a .m-num {
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.m-property ul li a .m-title {
+    color: #666;
+    font-size: 15px;
+}
+/* 我的订单 */
+.order{
+    height: 119px;
+    background: #ffffff;
+    margin: 28px 11px 0 11px; 
+}
+.order-h{
+    height: 40px;
+    margin: 0 13px;
+}
+.my-o{
+    display: block;
+    float: left;
+    padding-top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+.quan-o{
+    float: right;
+    padding-top: 13px;
+}
+.dd-list li {
+    float: left;
+    margin: 11px 13px;
+}
+.dd-list li a{
+    width: 64px;
+    height: 59px;
+}
+.dd-list img{
+    display: block;
+    width: 4px;
+    height: 4px;
+}
+/* 会员专享 */
+.vip{
+    height: 154px;
+    background: #ffffff;
+    margin: 10px 11px 11px; 
+}
+.vip-h{
+    height: 40px;
+    margin: 13px;
+}
+.v1{
+    display: block;
+    float: left;
+    padding-top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+.v2{
+    float: right;
+    padding-top: 13px;
+}
+.v-left {
+    float: left;
+    width: 164px;
+    height: 106px;
+    margin-top: 13px;
+}
+.price{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #de4330;
+    margin: 11px 11px;
+}
+/* 我的VMAll */
+.vmall{
+    height: 190px;
+    background: #ffffff;
+    margin: 10px 11px 11px; 
+}
+.vm-t{
+    display: block;
+    padding-top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    height: 40px;
+    margin: 13px;
+}
+.vm-list li{
+    float: left;
+    margin: 3px 17px;
+}
+.vm-list img{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+/* 我的服务 */
+.serve{
+    height: 190px;
+    background: #ffffff;
+    margin: 10px 11px 11px; 
+}
+.se-h{
+    height: 40px;
+    margin: 13px;
+}
+.my-se{
+    display: block;
+    float: left;
+    padding-top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+.se-zx{
+    float: right;
+    padding-top: 13px;
+}
+.se-list li{
+    float: left;
+    margin: 3px 17px;
+}
+.se-list img{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
