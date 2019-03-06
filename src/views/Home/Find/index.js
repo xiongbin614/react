@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import axios from 'axios';
-// import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 
 
 class Find extends React.Component{
@@ -31,10 +31,10 @@ class Find extends React.Component{
             <section>
               <ul className="clearfix">
                 <li>
-                  <a href="#">
+                  <NavLink to="/details">
                     <img src="https://res.vmallres.com/nwap/20190115/staticm/img/find/icon_headline.png" />
                     <p>商城公告</p>
-                  </a></li>
+                  </NavLink></li>
                 <li> <a href="#"><img
                       src="https://res.vmallres.com/pimages//cop/image/2019/tiHS593NPXbqgwfT47xk.png"/>
                     <p>企业购</p>
