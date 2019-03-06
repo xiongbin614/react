@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.less';
 
 class Details extends Component {
   render() {
     return (
-      <div>详情页面</div>
+      <div className="details">
+
+      
+      详情页面</div>
     )
   }
 }
