@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration:none;
+}
+h3{
+  font-size: 14px;
+  color:rgb(51, 48, 48);
+}
+h1{
+  font-size: 20px;
+
+}
+h2{
+  margin: 10px;
+  font-size: 18px;
+  color:rgb(212, 0, 0);
+}
+.A{
+  background: #eeeeee;
+  text-align: center;
+  width: 414px;
+  height: 100%;
+}
+header{
+  background: #fff;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.nav{
+  width: 100%;
+  height: 200px;
+  padding-top: 80px;
+  background:#fff;
+}
+p{
+  font-size:18px;
+}
+.A .nav p a{
+  margin-top:15px;
+  text-align: center;
+  display:inline-block;
+  height: 30px;
+  line-height: 25px;
+  width: 90px;
+  color:rgb(252, 86, 86);
+  border: red 2px solid;
+  border-radius: 45px;
+}
+.A .main{
+  background:rgb(252, 86, 86);
+  overflow: hidden;
+
+}
+.mian p{
+  font-size: 20px;
+  font-weight: 900;
+  height: 60px;
+  line-height: 60px;
+}
+.mian_t{
+  overflow: hidden;
+  padding: 0 2px;
+  background: #eee;
+}
+.mian_t ul li{
+    width: 50%;
+    position: relative;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mian_t ul li a{
+  margin: 0 0 5px 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 7.5px 4px 5px;
+  text-align: center;
+  display: block;
+  position: relative;
+  height:260px;
+}
+.mian_t ul li a img{
+  width: 100%;
+}
+
+.im-nav-xinwen{
+  width: 100%;
+}
+
+
+.im-nav-xinwen ul li a p img{
+  height:153px;
+  width: 100%;
+  padding: 0 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.p-name{
+  font-size: 14px;
+  line-height: normal;
+  margin: 0 16px 6px 16px;
+  padding: 0;
+  height: auto;
+  color: #333;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding-right: 4px;
+}
+.p-promotion{
+  font-size: 12px;
+  color: #666666;
+  padding: 0 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  line-height: 1.2;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+}
+
+.p-other {
+  margin: 10px 16px 0;
+  line-height: normal;
+  position: relative;
+  padding: 0;
+  color: #999999;
+  font-size: 12px;
+  display: flex;
+  position: relative;
+  margin-bottom: 6px;
+}
+.p-other span {
+  float: left;
+
+}
+.p-other .em{
+  position: absolute;
+  right: 0;
+
+}
+
+.findList {
+  margin-bottom: 8px;
+  width: 100%;
+  margin: 10px 0;
+  background: #eee;
+  padding: 5px 0;
+}
+
+.findList .h {
+  padding: 10px 0 12px 0;
+  font-size: 18px;
+  color: #333333;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+.camera-floor {
+  height: 280px;
+  margin: 0 6px;
+  margin-bottom: 2px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+.click-more {
+  padding: 13px 11px 11px 11px;
+  display: table;
+  margin: 0 auto;
+  -webkit-background-size: 8px 12px;
+  background-size: 8px 12px;
+  margin-bottom: 6px;
+}
+.click-more {
+  padding: 13px 11px 11px 11px;
+  display: table;
+  margin: 0 auto;
+  -webkit-background-size: 8px 12px;
+  background-size: 8px 12px;
+  margin-bottom: 6px;
+  z-index: 23;
+  color: #000;
+}
+
+.camera-floor .large {
+  width: 62%;
+  height: 186px;
+  margin-right: 2px;
+}
+
+.camera-floor div {
+  float: left;
+  position: relative;
+}
+.camera-floor .small {
+  height: 92px;
+  margin-bottom: 2px;
+  width: 37%;
+}
+.camera-floor .middle {
+  width: 62%;
+  margin-left: 2px;
+  height: 92px;
+}
+.camera-floor img {
+  height: 100%;
+  width: 100%;
+}
+.camera-floor div p {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  right: 10px;
+  font-size: 11px;
+  color: #ffffff;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  line-height: normal;
+
+}
+

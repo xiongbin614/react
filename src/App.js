@@ -5,10 +5,7 @@ import {  HashRouter, Route,  Switch } from 'react-router-dom';
 import Home from '@/views/Home/';
 import Login from '@/views/Login/';
 import Details from '@/views/Details/';
-<<<<<<< HEAD
-=======
 import Register from '@/views/Register/';
->>>>>>> xb
 class App extends Component {
   render() {
     return (
