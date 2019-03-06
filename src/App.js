@@ -5,6 +5,7 @@ import {  HashRouter, Route,  Switch } from 'react-router-dom';
 import Home from '@/views/Home/';
 import Login from '@/views/Login/';
 import Details from '@/views/Details/';
+import Register from '@/views/Register/';
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
         <Switch>
           <Route path="/details" component={Details}></Route>
           <Route path="/login" component={Login}></Route>
+          <Route path="/register" component={Register}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </HashRouter>

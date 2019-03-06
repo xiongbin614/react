@@ -2,14 +2,97 @@ import React from 'react';
 import './ui.less';
 import Goods from './comons/ui.jsx';
 import Footer from "@/components/ConentFooter/ui.jsx";
+import { Carousel, WingBlank, Button } from 'antd-mobile';//轮播图插件
+import 'antd-mobile/dist/antd-mobile.css';
+import axios from 'axios';
 class Huawei extends React.Component{
-    
+  constructor(props){
+    super(props)
+    this.state={
+      list:[]
+    }
+    this.getDate()
+  }
+  // componentDidMount(){
+  //   console.log(this.props.match.params.id)
+  //   // this.getDate()
+  // }
+
+  componentWillReceiveProps(next){
+    console.log(next)
+    console.log(this.props)
+    if(next.location.pathname!=this.props.location.pathname){
+      this.getDate()
+    }
+  }
+  // 获取数据
+  getDate(){
+    // if (this.props.match.params.id === 'huawei') {
+        axios.get('http://localhost:3005/getInfo/find').then(response => {
+          let data = response.data[0];
+          var arr = [];
+          for (let i in data) {
+            arr.push(data[i]); //属性
+            arr.splice(11,1)
+          }
+          // console.log(arr)
+          let name = '';
+          if (this.props.match.params.id==='huawei'){
+            name ="华为手机"
+          } else if (this.props.match.params.id === 'honor'){
+            name = "荣耀手机"
+          } else if (this.props.match.params.id === 'honornew') {
+            name = "笔记本&平板"
+          } else if (this.props.match.params.id === 'digital') {
+            name = "智能穿戴"
+          } 
+          // console.log(name)
+          let temp = arr.find(item => {
+            return item.name === name;
+          }).subCategorys.map(item => {
+            if (item.type === 3) {
+              return item
+            }
+          })
+          for(let i=0;i<temp.length;i++){
+            if(temp[i]===undefined){
+              temp.splice(i,1);
+              i=i-1;
+            }
+          }
+          this.setState({
+            list: temp
+          })
+          // console.log(this.state.list)
+        }).catch(error => {
+          console.log(error)
+        })
+      // } else {
+      //   console.log('555')
+      // }
+  }
+
+
   render(){
     return(
+      
       <div className="huawei">
+     
       {/* 轮播图 */}
           <div className="h-banner">
-            {this.props.match.params.id}
+          <WingBlank>
+            <Carousel
+              autoplay={true}
+              infinite
+              dots={true}
+            >
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/ugfxv1s1vEseKNice2ok.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/6Km8n1Rwe94ttWlNKtsE.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/8Kl2w0EsqEH45Nx6e74B.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/EnaGwaeJbrWGfyhlnzJo.png" alt="" />
+            </Carousel>
+          </WingBlank>
+            {/* {this.props.match.params.id} */}
           </div>
           {/* 导航 */}
           <ul className="h-nav">
@@ -40,8 +123,16 @@ class Huawei extends React.Component{
              <img src="https://res.vmallres.com/pimages//sale/2019-02/DSVirP2e7W8cawkrqvBu.png" alt=""/>
           </div>
           {/* 手机电脑等组件 */}
-        <Goods></Goods>
-        <Goods></Goods>
+        {
+          this.state.list.map(item => {
+            return (
+              <Goods name={item} key={item.id}></Goods>
+            )
+          })
+        }
+        {this.props.name}
+        
+        {/* <Goods></Goods> */}
         <Footer></Footer>
       </div>
     )

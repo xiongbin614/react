@@ -5,6 +5,12 @@
     height: 157px;
     width: 100%;
     background: rebeccapurple;
+    overflow: hidden;
+    .am-wingblank{//轮播图样式
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
   }
   .i-nav{
     height: 98px;
@@ -92,6 +98,7 @@
     width: 100%;
     h2{
       height: 53px;
+      background: white;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -101,11 +108,16 @@
     .i-tjShow{
       height: 205px;
       width: 100%;
+      background: white;
       overflow-x: auto;
+      &::-webkit-scrollbar{
+              display:none;
+          }
       .tj-info{
         height: 100%;
         min-width: auto;
         display: flex;
+        
         li{
           width: 130px;
           height: 100%;

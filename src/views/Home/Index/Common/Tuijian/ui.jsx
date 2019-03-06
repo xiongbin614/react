@@ -3,15 +3,50 @@ import React from 'react';
 import './ui.less';
 import Footer from '@/components/ConentFooter/ui.jsx';
 import TjShow from './commons/ui.jsx';
-
+import { Carousel, WingBlank, Button } from 'antd-mobile';//轮播图插件
+import 'antd-mobile/dist/antd-mobile.css';
+import axios from 'axios';
 class IndexConent extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={
+
+    }
+  }
+  // 创建之前
+  componentWillMount(){
+    console.log(this.props.match.url)
+    if (this.props.match.url ==='/index'){
+      console.log('666')
+      axios.get('http://localhost:3005/getInfo/find').then(response=>{
+        let data = response.data[0]
+        console.log(data)
+      }).catch(error=>{
+        console.log(error)
+      })
+    }else{
+      console.log('555')
+    }
+  }
   render(){
     console.log(this.props);
     return (
       <div className="i-content">
           <div className="i-banner">
-              
-            {/* {this.props.match.params.id} */}
+
+          <WingBlank>
+            <Carousel
+              autoplay={true}
+              infinite
+              dots={true}
+            >
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/ugfxv1s1vEseKNice2ok.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/6Km8n1Rwe94ttWlNKtsE.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/8Kl2w0EsqEH45Nx6e74B.jpg" alt="" />
+              <img src="https://res.vmallres.com/pimages//sale/2019-02/EnaGwaeJbrWGfyhlnzJo.png" alt=""/>
+            </Carousel>
+          </WingBlank>
+          
           </div>
           <div className="i-nav">
               <div className="i-navTop">
