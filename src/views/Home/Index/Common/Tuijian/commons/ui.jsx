@@ -1,5 +1,6 @@
 import React from 'react';
 import './ui.less';
+import { Route, NavLink, Switch } from 'react-router-dom';
 
 class TjShow extends React.Component{
   render(){
@@ -79,7 +80,9 @@ class TjShow extends React.Component{
 
           
           <div className="moreInfo">
-            发现更多笔记本<i>></i>
+            <NavLink to="/moregoods">
+               发现更多笔记本<i>></i>
+            </NavLink>
           </div>
       </div>
     )
