@@ -35,12 +35,9 @@ footer, header, hgroup, menu, nav, section {
 }
 html{
 	height: 100%;
-	/* width: 640px; */
 }
 body {
 	height: 100%;
-	/* margin: auto; */
-	/* width: 750px; */
 	line-height: 1;
 }
 ol, ul {

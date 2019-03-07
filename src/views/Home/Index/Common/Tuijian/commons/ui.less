@@ -1,111 +1,77 @@
-.i-content{
-  height: 1000px;
+.TjShow{
   width: 100%;
-  .i-banner{
-    height: 157px;
-    width: 100%;
-    background: rebeccapurple;
-    overflow: hidden;
-    .am-wingblank{//轮播图样式
-      height: 100%;
-      width: 100%;
-      margin: 0;
-    }
+  min-height: auto;
+  overflow: hidden;
+  background: white;
+  margin-bottom: 10px;
+  h2{
+    height: 53px;
+    line-height: 53px;
+    text-align: center;
+    color: #444;
   }
-  .i-nav{
-    height: 98px;
-    width: 100%;
-    border-bottom: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    .i-navTop{
-      height: 25px;
+  .Tj-item{
       width: 100%;
-      padding: 0 16px;
+      min-height: auto;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      span{
-        font-size: 12px;
-      }
-    }
-    .i-navBottom{
-      height: 73px;
-      width: 100%;
-      display: flex;
+      flex-wrap: wrap;
+      // overflow: hidden;
       li{
-        width: 20%;
-        height: 90%;
+        width: 50%;
+        float: left;
+        height: 238px;
         display: flex;
-        align-items: center;
         flex-direction: column;
+        // background: green;
+        padding: 0 5px 12px 5px;
         justify-content: space-around;
-        img{
-          // height: 41px;
-          width: 41px;
+        align-items: center;
+        box-sizing: border-box;
+        .item-img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 178px;
+            justify-content: space-between;
+            background: #f9f9f9;
+            border-radius: 10px;
+            flex-direction: column;
+            span{
+              font-size: 12px;
+              width: 40px;
+              height: 14px;
+              line-height: 14px;
+              text-align: center;
+              background: #FF6A6E;
+              color: white;
+              border-radius: 0 0 5px 5px;
+            }
+            p{
+              height: 25px;
+              width: 100%;
+              border-radius:0 0 10px 10px;
+              color: #9b9b9b;
+              line-height: 25px;
+              text-align: center;
+              font-size: 12px;
+              background: rgba(155,155,155,0.1);
+            }
+            img{
+              width: 127px;
+            }
         }
-        span{
-          font-size: 12px;
+        .p-name{
+          font-size: 14px;
+          color: #333;
+        }
+        .p-price{
+          font-size: 14px;
+          color: #ca141d;
         }
       }
-    }
   }
-  .i-hander{
-    background: white;
-    height: 42px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    span{
-      width: 20%;
-      font-size: 14px;
-      font-weight: 700;
-    }
-    p{
-      width: 10%;
-      font-size: 12px;
-    }
-    .handerNews{
-      width: 70%;
-    }
-  }
-  .i-showImg{
-    width: 100%;
-    min-height: 500px;
-    display: flex;
-    padding: 0 5px;
-    justify-content: space-between;
-    .showLeft{
-      width: 49.6%;
-      height: 100%;
-      img{
-        width: 100%;
-      }
-    }
-    .showRight{
-      width: 49.6%;
-      height: 100%;
-      img{
-        width: 100%;
-      }
-    }
-  }
-  .i-tuijian{
-    height: 276px;
-    width: 100%;
-    h2{
-      height: 53px;
-      background: white;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #444;
-    }
-    .i-tjShow{
+  
+      .i-tjShow{
       height: 205px;
       width: 100%;
       background: white;
@@ -171,5 +137,13 @@
         }
       }
     }
+
+  .moreInfo{
+    height: 43px;
+    width: 100%;
+    text-align: center;
+    line-height: 43px;
+    color: #4a4a4a;
+    font-size: 16px;
   }
 }
