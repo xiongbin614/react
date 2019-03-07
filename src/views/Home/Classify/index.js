@@ -55,47 +55,10 @@ class Classify extends React.Component{
 
   render(){
     return(
-    <BrowserRouter>
-      <div id="app">
-        <header className="breadcrumd-search">
-            <div className="search">
-                <span className="iconfont">&#xe741;</span>
-                <span onClick={this.bb.bind(this)}>荣誉10</span>
-            </div>
-            <i className="shortcut">
-                <span className="iconfont">&#xe634;</span>
-            </i>
-        </header>
-        
-        <div className="category">
-            <section className="category-left-box">
-            <section className="category-left">
-                <ul>
-                    {
-                        this.state.data.map(item=>{
-                            return(
-                                <li key={item.name} onClick={this.tz.bind(this,item.name)}>{item.name}</li>
-                            )
-                        })
-                    }
-                </ul>
-            </section>
-            </section>
-            <section className="category-right-box">
-                <section className="category-right">
-                        {this.state.list.name}
-                     {/* {
-                         this.state.list.map(item=>{
-                             return (
-                                    <li>{item.name}</li>
-                             )
-                         })
-                     } */}
-                </section>
-            </section>
-         </div>
-      </div>
-      </BrowserRouter>
+        <div className="classify">
+            
+
+        </div>
     )
   }
 }
