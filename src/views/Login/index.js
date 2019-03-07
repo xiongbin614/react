@@ -11,6 +11,9 @@ class Login extends Component {
     }
     this.submit=this.submit.bind(this)
   }
+  componentDidMount(){
+    console.log(this.props)
+  }
   // 点击登录
   submit(){
     let phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;
@@ -28,6 +31,7 @@ class Login extends Component {
         console.log(res.data.code)
         if(res.data.code===0){
           alert("登录成功")
+          sessionStorage.setItem("name",this.userinput.value)
         }else{
           alert("用户名或者密码错误ya ")
         }
