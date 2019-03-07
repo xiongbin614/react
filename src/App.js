@@ -6,6 +6,7 @@ import Home from '@/views/Home/';
 import Login from '@/views/Login/';
 import Details from '@/views/Details/';
 import Register from '@/views/Register/';
+import MoreGoods from '@/views/MoreGoods/';
 class App extends Component {
   render() {
     return (
@@ -14,6 +15,7 @@ class App extends Component {
           <Route path="/details" component={Details}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/register" component={Register}></Route>
+          <Route path="/moregoods" component={MoreGoods}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </HashRouter>

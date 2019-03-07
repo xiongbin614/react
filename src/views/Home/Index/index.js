@@ -28,9 +28,9 @@ class Index extends React.Component{
             <img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/logo/logo_vmall.png" alt="" />
             <div className="search">
               <i className="iconsearch iconfont"></i>
-              <div className="keys">
+              <NavLink to="/login" className="keys">
                55
-              </div>
+              </NavLink>
             </div>
             <i className="iconfont iconxiaoxi"></i>
             <span>登录</span>
