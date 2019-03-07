@@ -2,6 +2,9 @@
   height: 100%;
   width: 100%;
   overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .lzy-swiper{
   height:354px;
@@ -21,4 +24,93 @@
     margin-right: 0px;
     }
 
+}
+.top-nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 55px;
+  padding: 16px 20px;
+  z-index: 9999;
+  .icon-btn-left {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .icon-btn-right {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    float: right;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.iconfont{
+  font-size: 24px;
+}
+
+.footer{
+  height:50px;
+  width: 100%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  a{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  width: 15%;
+  }
+  .active{
+    color: #e01d20;
+  }
+}
+
+.xqy-footer-gm{
+  width: 60%;
+  height:40px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius:20px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  margin: 0 10px;
+}
+.gm-l{
+  display: inline-block;
+  background: rgba(255, 60, 46, 0.863);
+  padding: 0 10px;
+  width: 50%;
+}
+
+.gm-r{
+  display: inline-block;
+  background: rgb(209, 3, 3);
+  padding: 0 10px;
+  width: 50%;
+}
+
+.xqy-mian{
+  margin-bottom:150px;
 }
