@@ -1,3 +1,6 @@
+body{
+  background: #fff;
+}
 .lzy-app{
   text-align: center;
   width: 100%;
@@ -9,6 +12,7 @@ a{
 }
 h1{
   font-size: 20px;
+  margin: 0 0 ;
 }
 .lzy-head{
   height: 46px;
@@ -55,6 +59,7 @@ color: #000;
 
 .lzy-mian{
   width: 100%;
+  background: #fff;
 }
 .lzy-mian-t>h1{
   height: 45px;
@@ -149,9 +154,9 @@ color: #000;
 .findList {
   margin-bottom: 8px;
   width: 100%;
-  margin: 10px 0;
-  border-top:5px solid #eee;
-  border-bottom:5px solid #eee;
+  border-top:10px solid #eee;
+  border-bottom:10px solid #eee;
+  background: #fff;
 }
 
 .findList .h {

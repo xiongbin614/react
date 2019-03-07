@@ -31,10 +31,10 @@ class Find extends React.Component{
             <section>
               <ul className="clearfix">
                 <li>
-                  <a>
+                  <NavLink to="/details">
                     <img src="https://res.vmallres.com/nwap/20190115/staticm/img/find/icon_headline.png" />
                     <p>商城公告</p>
-                  </a></li>
+                  </NavLink></li>
                 <li> <a href="#"><img
                       src="https://res.vmallres.com/pimages//cop/image/2019/tiHS593NPXbqgwfT47xk.png"/>
                     <p>企业购</p>
