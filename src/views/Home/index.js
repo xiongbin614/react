@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import Index from './Index/index';
 import Cart from './Cart';
 import Center from './Center';
-import Classify from './Classify';
+import Classify from './Classify/index';
 import Find from './Find';
 class Home extends Component{
   render () {

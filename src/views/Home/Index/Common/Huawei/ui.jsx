@@ -13,10 +13,6 @@ class Huawei extends React.Component{
     }
     this.getDate()
   }
-  // componentDidMount(){
-  //   console.log(this.props.match.params.id)
-  //   // this.getDate()
-  // }
 
   componentWillReceiveProps(next){
     console.log(next)
@@ -27,7 +23,6 @@ class Huawei extends React.Component{
   }
   // 获取数据
   getDate(){
-    // if (this.props.match.params.id === 'huawei') {
         axios.get('http://localhost:3005/getInfo/find').then(response => {
           let data = response.data[0];
           var arr = [];
@@ -35,7 +30,6 @@ class Huawei extends React.Component{
             arr.push(data[i]); //属性
             arr.splice(11,1)
           }
-          // console.log(arr)
           let name = '';
           if (this.props.match.params.id==='huawei'){
             name ="华为手机"
@@ -46,7 +40,6 @@ class Huawei extends React.Component{
           } else if (this.props.match.params.id === 'digital') {
             name = "智能穿戴"
           } 
-          // console.log(name)
           let temp = arr.find(item => {
             return item.name === name;
           }).subCategorys.map(item => {
@@ -63,13 +56,9 @@ class Huawei extends React.Component{
           this.setState({
             list: temp
           })
-          // console.log(this.state.list)
         }).catch(error => {
           console.log(error)
         })
-      // } else {
-      //   console.log('555')
-      // }
   }
 
 
@@ -132,7 +121,6 @@ class Huawei extends React.Component{
         }
         {this.props.name}
         
-        {/* <Goods></Goods> */}
         <Footer></Footer>
       </div>
     )

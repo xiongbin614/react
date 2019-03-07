@@ -1,13 +1,15 @@
 import React from 'react';
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 import './ui.less';
+import {  NavLink} from 'react-router-dom';
+
 
 class Footer extends React.Component{
   render(){
     return (
         <div className="Footer">
             <div className="f-top">
-              <span>登录</span>
+             <NavLink to="/login">登录</NavLink>
               <i>1</i>
               <span>反馈</span>
             </div>
