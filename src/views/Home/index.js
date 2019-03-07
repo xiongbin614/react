@@ -20,7 +20,7 @@ class Home extends Component{
             <Route path="/classify" component={Classify}></Route>
             <Route path="/find" component={Find}></Route>
             < Route exact path="/" render={() => <Redirect to="/index" />} />
-                <Route path="/"  component={Index}></Route>
+              <Route path="/"  component={Index}></Route>
           </Switch>
         </HashRouter> 
           </div> 
