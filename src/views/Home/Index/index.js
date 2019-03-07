@@ -29,20 +29,7 @@ class Index extends React.Component{
             <div className="search">
               <i className="iconsearch iconfont"></i>
               <div className="keys">
-                {/* <WingBlank>
-                  <Carousel className="my-carousel"
-                    // vertical
-                    dots={false}
-                    // dragging={false}
-                    // swiping={false}
-                    autoplay
-                    infinite
-                  >
-                    <p>5555</p>
-                    <p>6666</p>
-                    <p>7777</p>
-                  </Carousel>
-                </WingBlank> */}
+               55
               </div>
             </div>
             <i className="iconfont iconxiaoxi"></i>
