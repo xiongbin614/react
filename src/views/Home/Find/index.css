@@ -1,11 +1,18 @@
+body{
+  background: #fff;
+}
 .lzy-app{
   text-align: center;
   width: 100%;
   height:100%;
 }
 
+a{
+  text-decoration: none;
+}
 h1{
   font-size: 20px;
+  margin: 0 0 ;
 }
 .lzy-head{
   height: 46px;
@@ -16,6 +23,7 @@ h1{
   text-align: center;
   background: #fff;
 
+  z-index: 9999;
 }
 
 .lzy-head-mian{
@@ -51,6 +59,7 @@ color: #000;
 
 .lzy-mian{
   width: 100%;
+  background: #fff;
 }
 .lzy-mian-t>h1{
   height: 45px;
@@ -145,9 +154,9 @@ color: #000;
 .findList {
   margin-bottom: 8px;
   width: 100%;
-  margin: 10px 0;
-  border-top:5px solid #eee;
-  border-bottom:5px solid #eee;
+  border-top:10px solid #eee;
+  border-bottom:10px solid #eee;
+  background: #fff;
 }
 
 .findList .h {
@@ -237,4 +246,31 @@ color: #000;
     display: table;
     margin: 0 auto;
     margin-bottom: 6px;
+}
+
+
+.itemProdDetail .p-other em {
+  padding-left: 20px;
+  float: right;
+  font-size: 12px;
+}
+
+.itemProdDetail .p-img img{
+  height:153px;
+  width: 100%;
+  padding: 0 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.kbhh{
+  margin-top: 10px;
 }
