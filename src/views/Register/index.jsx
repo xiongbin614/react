@@ -21,6 +21,7 @@ class Register extends React.Component{
         phone: this.inputVal.value
       })
       // 提交注册
+     
     }else{
       this.setState({
         yzText: '号码格式不对'
@@ -32,6 +33,20 @@ class Register extends React.Component{
     let pwdReg = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/;//校验登录名：只能输入5-20个以字母开头、可带数字、“_”、“.”的字串
     if (pwdReg.test(this.pwd.value) || pwdReg.test(this.mypwd.value)){
       if (this.pwd.value === this.mypwd.value){
+        axios.post('http://localhost:3005/users/register', {
+          userName: this.inputVal.value,
+          passWord: this.mypwd.value
+        }).then(res => {
+          console.log(res.data.code)
+          if (res.data.code === 0) {
+            alert("注册成功")
+            // sessionStorage.setItem("name", this.userinput.value)
+          } else {
+            alert("用户名或者密码错误ya ")
+          }
+        }).catch(err => {
+          console.log(err)
+        })
         console.log("注册成功")
         this.setState({
           pwd: this.mypwd.value
