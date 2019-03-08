@@ -3,20 +3,37 @@ import 'antd-mobile/dist/antd-mobile.css';
 import React, { Component } from 'react';
 import './index.less';
 import { NavLink } from 'react-router-dom';
+import { BackTop } from 'antd';
+
 
 class Details extends Component {
+  scrollToAnchor (id){
+    document.getElementById(id).scrollIntoView();
+    }
+    componentDidMount(){
+      window.addEventListener('scroll', this.handleScroll);
+    }
 
+    handleScroll(id){
+      const xhq = document.getElementById('xqy-head-nav');
+      if(window.scrollY >= 100){
+         xhq.style.opacity = '1.0';
+      }else{
+          xhq.style.opacity = '0';
+      }
+
+    }
   render() {
     return (
-      <div className="details" >
-        <div className="xqy-head-nav" >
+      <div className="details" id="sp">
+        <div className="xqy-head-nav" id="xqy-head-nav">
           <ul className="xqy-head-nav-ul">
             <li><a id="btn-back" href="javascript:history.go(-1);"><img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/icon/icon_black_1.png"/></a></li>
-            <li><a href="#">商品</a></li>
-            <li><a href="#">评价</a></li>
-            <li><a href="#">参数</a></li>
-            <li><a href="#">详情</a></li>
-            <li><a href="javascript:;" className="icon-btn-right-1 icon-header-menu" onclick="ecWap.paq('trackLink', 'wap-pdp-more-click_event', 'link', '');" title="下拉菜单"><img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/icon/icon_header_nav.png" /></a></li>
+            <li><a onClick={()=>this.scrollToAnchor('sp')}>商品</a></li>
+            <li><a onClick={()=>this.scrollToAnchor('pj')}>评价</a></li>
+            <li><a onClick={()=>this.scrollToAnchor('cs')}>参数</a></li>
+            <li><a onClick={()=>this.scrollToAnchor('xq')}>详情</a></li>
+            <li><a href="javascript:;" className="icon-btn-right-1 icon-header-menu"title="下拉菜单"><img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/icon/icon_header_nav.png" /></a></li>
           </ul>
         </div>
         <div className="top-nav" >
@@ -45,12 +62,12 @@ class Details extends Component {
 
         </div>
 
-
+        <BackTop />
         <div className="xqy-mian">
           <div className="money">
           <p>￥2199</p>
           </div>
-          <div className="xqy-xx">
+          <div className="xqy-xx" >
             <p className="xqy-xiakuan-0">荣耀10 GT游戏加速 AIS手持夜景 AI摄影手机 6GB+64GB 幻影蓝 全网通 双卡双待 荣耀10GT</p>
           </div>
           <div className="p-promotion j_pro-skuPromWord">
@@ -177,19 +194,19 @@ class Details extends Component {
               </div>
 
 
-          <div>
+          <div id="pj">
             <div>用户评价</div>
             <div>内容</div>
             <div>查看所有评价</div>
           </div>
 
-          <div>
+          <div id="cs">
             <div>规格参数</div>
             <div>查看所有参数</div>
           </div>
 
 
-          <div className="accordion-content accordion-content-active">
+          <div className="accordion-content accordion-content-active" id="xq">
             <p className="p-loading"><span></span></p>
             <p><img src="https://res.vmallres.com/pimages/detailImg/2018/10/23/201810232126272938527.png" /></p>
             <p><img src="https://res.vmallres.com/pimages/detailImg/2018/10/23/201810232126272968489.png" /></p>
