@@ -27,13 +27,6 @@ class Goods extends React.Component{
               )
             })
               }
-            {/* <li>
-              <img src="https://res0.vmallres.com/pimages//product/6901443278169/428_428_1544693734326mp.png
-" alt=""/>
-               <p className="p-name">华尔威荣耀9</p>
-               <p className="p-promotion">赠品质好礼</p>
-               <p className="p-price">￥1300</p>
-            </li> */}
             
             
            

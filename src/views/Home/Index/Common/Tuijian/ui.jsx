@@ -50,9 +50,10 @@ class IndexConent extends React.Component{
           </div>
           <div className="i-nav">
               <div className="i-navTop">
-                <span>官方商城</span>
-                <span>官方商城</span>
-                <span>官方商城</span>
+                 <span><i className="icon-gou iconfont"></i>官方商城</span>
+                 <span><i className="icon-gou iconfont"></i>正品保障</span>
+                 <span><i className="icon-gou iconfont"></i>售后无忧</span>
+                
               </div>
               <ul className="i-navBottom">
                 <li>
@@ -60,20 +61,20 @@ class IndexConent extends React.Component{
                   <span>邀请有奖</span>
                 </li>
                 <li>
-                  <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/DY5mX2aQoCVt63gWQnlD.png" alt="" />
-                  <span>邀请有奖</span>
+              <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/GA8b4d9ew2UnHx97eHZE.png" alt="" />
+                  <span>会员领劵</span>
                 </li>
                 <li>
-                  <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/DY5mX2aQoCVt63gWQnlD.png" alt="" />
-                  <span>邀请有奖</span>
+              <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/nOFHKa9U0m2rN4rqd0am.png" alt="" />
+                  <span>明星同款</span>
                 </li>
                 <li>
-                  <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/DY5mX2aQoCVt63gWQnlD.png" alt="" />
-                  <span>邀请有奖</span>
+              <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/CJSQBniFdRg0CwCeTtiM.png" alt="" />
+                  <span>以旧换新</span>
                 </li>
                 <li>
-                  <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/DY5mX2aQoCVt63gWQnlD.png" alt="" />
-                  <span>邀请有奖</span>
+              <img src="https://res.vmallres.com/pimages//squaredInfo/icon/20190213/guGTsIerbvFuEjvKyfxp.png" alt="" />
+                  <span>优购码</span>
                 </li>
                 
               </ul>

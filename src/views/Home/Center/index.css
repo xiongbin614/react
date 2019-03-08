@@ -44,7 +44,7 @@ body{
     background: #f9f9f9;
 }
 /* 头部 */
-.header{
+.headers{
     height: 219px;
     background: #e43430;
     border-radius:0 0 50px 50px; 
@@ -99,7 +99,7 @@ body{
     /* position: absolute; */
     width: 342px;
     height: 68px;
-    margin-left: 9px;
+    margin-left: 16px;
     /* top:166px; */
     /* left:8px; */
     background: #ffffff;
@@ -223,7 +223,7 @@ body{
 .serve{
     height: 190px;
     background: #ffffff;
-    margin: 10px 11px 11px; 
+    margin: 10px 11px 70px 11px;
 }
 .se-h{
     height: 40px;

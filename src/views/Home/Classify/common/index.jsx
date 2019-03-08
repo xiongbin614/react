@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.less';
+import {  NavLink} from 'react-router-dom';
+
 class Item extends React.Component{
   componentDidMount(){
     console.log(this.props.initdata)
@@ -13,11 +15,10 @@ class Item extends React.Component{
             this.props.id.subCategorys && this.props.id.subCategorys.map(item=>{
               return(
                 <>
-                  <li>
-                    
+                  <NavLink to={"/details?id="+item._id}>          
                     <img src={'https://res0.vmallres.com/pimages/' + item.photoPath + item.photoName} alt="" />
                     <p>{item.name}</p>
-                  </li>
+                  </NavLink>
                 </>
               )
             })

@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import Item from './common/item.jsx';
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 
 
@@ -9,9 +10,28 @@ class Cart extends React.Component{
       <div className="A">
         <header>购物车</header>
         <div className="nav">
-          <p><i className="iconfont icon-gwc">购物车还没有商品赶紧选购吧！</i></p>
-          <p><a href="#">去逛逛</a></p>
+          <div claName="kong">
+            <p><i className="iconfont icon-gwc">购物车还没有商品赶紧选购吧！</i></p>
+            <p><a href="#">去逛逛</a></p>
+          </div>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          {/* <div className="jiesuanFooter">
+            <div className="check">
+              <input type="checkbox" name="" id="" />全选
+            </div>
+            <div className="result">
+              <p>总计:</p>
+              <span>￥2500</span>
+              <button>结算(1)</button>
+            </div>
+          </div> */}
+      
+      
         </div>
+
+        
         <div className="mian">
           <p>热销推荐</p>
           <div className="mian_t">

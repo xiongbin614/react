@@ -1,53 +1,75 @@
 import React from 'react';
 import './index.css';
 import imgURL from '@/center-images/img01.png';
-// import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import { Carousel, WingBlank, Button } from 'antd-mobile';//轮播图插件
+import 'antd-mobile/dist/antd-mobile.css';
 
 
 class Center extends React.Component{
+        constructor(props){
+            super(props)
+            this.state={
+                userName:'登录/注册',
+            }
+        }
+    componentWillMount(){
+        console.log(sessionStorage.length)
+        this.setState({
+            userName: sessionStorage.length ? sessionStorage.getItem("name") : '登录/注册'
+        })
+        if (sessionStorage.length>0){
 
+        }
+    }    
+    login(e){
+        if (sessionStorage.length>0){
+            console.log(55555)
+            e.preventDefault()
+        }
+    }
+    
 
   render(){
     return(
           <div className="center">
-           <div class="header">
-        <div class="head-top">
-        {/* <img src="@/center-images/L0vzYXpWVGPfY9UH2Fm0.jpg" alt=""/> */}
+           <div className="headers">
+        <div className="head-top">
         <a href="#"><img src={imgURL}/></a> 
         </div>
-        <div class="head-main">
+        <div className="head-main">
             <p><img src="https://res.vmallres.com/nwap/20190215/staticm/img/personal/defaultface_user_after.png"/></p>
-            <p><a href="#">登录/注册</a></p>
-            <p class="p2"><i>签到领积分</i></p>
+            <p><NavLink onClick={this.login.bind(this)} to="/login">{this.state.userName}</NavLink></p>
+            <p className="p2"><i>签到领积分</i></p>
         </div>
-        <div class="m-property">
+        <div className="m-property">
             <ul>
                 <li>
                     <a href="#">
-                        <p class="m-num">
+                        <p className="m-num">
                             -
                         </p>
-                        <p class="m-title">
+                        <p className="m-title">
                             积分
                         </p>
                     </a>
                 </li>
                  <li>
                     <a href="#">
-                        <p class="m-num">
+                        <p className="m-num">
                             -
                         </p>
-                        <p class="m-title">
+                        <p className="m-title">
                             积分
                         </p>
                     </a>
                 </li>
                  <li>
                     <a href="#">
-                        <p class="m-num">
+                        <p className="m-num">
                             -
                         </p>
-                        <p class="m-title">
+                        <p className="m-title">
                             积分
                         </p>
                     </a>
@@ -56,12 +78,12 @@ class Center extends React.Component{
         </div>
   </div>
   {/* <!-- 我的订单 --> */}
-  <div class="order">
-      <div class="order-h">
-        <span class="my-o"><a href="#">我的订单</a></span>
-        <span class="quan-o"><a href="#">全部订单</a></span>
+  <div className="order">
+      <div className="order-h">
+        <span className="my-o"><a href="#">我的订单</a></span>
+        <span className="quan-o"><a href="#">全部订单</a></span>
       </div>
-      <div class="dd-list">
+      <div className="dd-list">
           <ul>
               <li>
                 <a href="#">
@@ -92,24 +114,24 @@ class Center extends React.Component{
       </div>
   </div>
   {/* <!-- 会员专享 --> */}
-    <div class="vip">
-        <div class="vip-h">
-            <span class="v1"><a href="#">会员专享</a></span>
-            <span class="v2"><a href="#">更多会员权益</a></span>
+    <div className="vip">
+        <div className="vip-h">
+            <span className="v1"><a href="#">会员专享</a></span>
+            <span className="v2"><a href="#">更多会员权益</a></span>
         </div>
-        <div class="vip-b">
-            <div class="v-left">
+        <div className="vip-b">
+            <div className="v-left">
                 <div>
-                    <span class="price">￥200</span>
-                    <span class="coupons">
+                    <span className="price">￥200</span>
+                    <span className="coupons">
                       【会员】华为200元优惠券
                     </span>
                 </div>
             </div>
-            <div class="v-left">
+            <div className="v-left">
                 <div>
-                    <span class="price">￥200</span>
-                    <span class="coupons">
+                    <span className="price">￥200</span>
+                    <span className="coupons">
                       【会员】华为200元优惠券
                     </span>
                 </div>
@@ -117,11 +139,11 @@ class Center extends React.Component{
         </div>
     </div>
     {/* <!-- 我的VMAll --> */}
-    <div class="vmall">
-        <div class="vm-t">
+    <div className="vmall">
+        <div className="vm-t">
             <span>我的VMAll</span>
         </div>
-        <div class="vm-list">
+        <div className="vm-list">
             <ul>
                 <li>
                     <a href="#">
@@ -167,12 +189,12 @@ class Center extends React.Component{
         </div>
     </div>
     {/* <!-- 我的服务 --> */}
-    <div class="serve">
-        <div class="se-h">
-            <span class="my-se">我的服务</span>
-            <span class="se-zx">服务中心</span>
+    <div className="serve">
+        <div className="se-h">
+            <span className="my-se">我的服务</span>
+            <span className="se-zx">服务中心</span>
         </div>
-        <div class="se-list">
+        <div className="se-list">
             <ul>
                 <li>
                     <a href="#">
