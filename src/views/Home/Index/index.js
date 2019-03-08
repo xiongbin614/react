@@ -27,12 +27,12 @@ class Index extends React.Component{
           <div className="i-head">
             <img src="https://res.vmallres.com/nwap/20190215/images/echannelWap/logo/logo_vmall.png" alt="" />
             <div className="search">
-              <i className="iconsearch iconfont"></i>
+              <i className="icon-search iconfont"></i>
               <div className="keys">
-               55
+               荣耀9
               </div>
             </div>
-            <i className="iconfont iconxiaoxi"></i>
+            <i className="iconfont icon-xiaoxi"></i>
             <NavLink to="/login">登录</NavLink>
           </div>
           {/* 顶部导航 */}

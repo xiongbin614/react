@@ -9,16 +9,21 @@ class Huawei extends React.Component{
   constructor(props){
     super(props)
     this.state={
-      list:[]
+      list:[],
     }
     this.getDate()
   }
-
+  componentDidMount(){
+    
+  }
   componentWillReceiveProps(next){
     console.log(next)
-    console.log(this.props)
+    console.log(this.props.match.params.id)
     if(next.location.pathname!=this.props.location.pathname){
       this.getDate()
+    }
+    if (this.props.match.params.id == 'huawei') {
+      console.log(55)
     }
   }
   // 获取数据
@@ -86,23 +91,23 @@ class Huawei extends React.Component{
           {/* 导航 */}
           <ul className="h-nav">
             <li>
-            <i className="iconfont iconcategory"></i> 
+            <i className={"iconfont iconcategory"+" " +this.props.match.params.id}></i> 
               <span>分类</span>
             </li>
             <li>
-              <i className="iconfont iconcategory"></i>
+            <i className={"iconfont icon-v" + " " + this.props.match.params.id}></i>
               <span>优购码</span>
             </li>
             <li>
-              <i className="iconfont iconcategory"></i>
+            <i className={"iconfont icon-xunhuan" + " " + this.props.match.params.id}></i>
               <span>以旧换新</span>
             </li>
             <li>
-              <i className="iconfont iconcategory"></i>
+            <i className={"iconfont icon-shimingrenzheng" + " " + this.props.match.params.id}></i>
               <span>实名认证</span>
             </li>
             <li>
-              <i className="iconfont iconcategory"></i>
+            <i className={"iconfont icon-app" + " " + this.props.match.params.id}></i>
               <span>APP下载</span>
             </li>
           </ul>
@@ -115,7 +120,7 @@ class Huawei extends React.Component{
         {
           this.state.list.map(item => {
             return (
-              <Goods name={item} key={item.id}></Goods>
+              <Goods name={item} key={item.id} ></Goods>
             )
           })
         }

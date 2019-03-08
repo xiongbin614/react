@@ -39,8 +39,9 @@ class Register extends React.Component{
         }).then(res => {
           console.log(res.data.code)
           if (res.data.code === 0) {
-            alert("注册成功")
-            // sessionStorage.setItem("name", this.userinput.value)
+            setTimeout(() => {
+              this.props.history.replace('/login')
+            }, 1000);
           } else {
             alert("用户名或者密码错误ya ")
           }

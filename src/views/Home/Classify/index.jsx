@@ -83,7 +83,7 @@ class Classify extends React.Component{
                     <div className="c-input">
                       <i className="iconsearch iconfont"></i>
                           <div className="c-search">
-                            55
+                            荣耀Magic2
                           </div>
                         </div>
                       <i className="iconfont iconxiaoxi"></i>

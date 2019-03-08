@@ -8,23 +8,23 @@ class Footer extends Component {
     return (
       <div className="footer">
         <NavLink className="foot" to="/index">
-          <i className="iconfont iconshouye"></i>
+          <i className="iconfont icon-shouye"></i>
           <span>首页</span>
         </NavLink>
         <NavLink className="foot" to="/classify">
-          <i className='iconfont iconcategory'></i>
+          <i className='iconfont icon-category'></i>
           <span>分类</span>
         </NavLink>
         <NavLink className="foot" to="/find">
-          <i className='iconfont iconfaxian'></i>
+          <i className='iconfont icon-faxian'></i>
           <span>发现</span>
         </NavLink>
         <NavLink className="foot" to="/cart">
-          <i className='iconfont icongouwuchekong'></i>
+          <i className='iconfont icon-gouwuchekong'></i>
           <span>购物车</span>
         </NavLink>
         <NavLink className="foot" to="/center">
-          <i className='iconfont iconwode'></i>
+          <i className='iconfont icon-wode'></i>
           <span>我的</span>
         </NavLink>
       </div>

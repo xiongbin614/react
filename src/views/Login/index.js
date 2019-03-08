@@ -30,10 +30,11 @@ class Login extends Component {
       }).then(res=>{
         console.log(res.data.code)
         if(res.data.code===0){
-          alert("登录成功")
+          // alert("登录成功")
+         this.props.history.goBack();
           sessionStorage.setItem("name",this.userinput.value)
         }else{
-          alert("用户名或者密码错误ya ")
+          alert("用户名或者密码错误 ")
         }
       }).catch(err=>{
         console.log(err)
@@ -41,8 +42,13 @@ class Login extends Component {
 
     }else{
       console.log("输入有误")
-      alert("请输入正确的手机号码")
+      alert("手机号或者密码错误")
     }
+  }
+  // 跳转注册页面
+  register(){
+    // console.log(this.props)
+    this.props.history.push('/register')
   }
   render() {
     return (
@@ -67,7 +73,7 @@ class Login extends Component {
             <button onClick={this.submit}>登录</button>
               </div>
               <div className="register">
-                  <span>注册账号</span>
+                  <span onClick={this.register.bind(this)}>注册账号</span>
                   <span>忘记密码</span>
               </div>
               <div className="icons">
