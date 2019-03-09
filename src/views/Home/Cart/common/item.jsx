@@ -23,6 +23,10 @@ class Item extends React.Component{
       }
     }
     adc(){
+      this.setState({
+        // number: this.state.number += 1,
+        result: this.state.number * Number(this.price.innerHTML.substr(1))
+      })
       if(this.state.number!==1){
         this.setState({
           number:this.state.number-=1
