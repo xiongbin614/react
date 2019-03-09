@@ -17,13 +17,13 @@ class Huawei extends React.Component{
     
   }
   componentWillReceiveProps(next){
-    console.log(next)
-    console.log(this.props.match.params.id)
+    // console.log(next)
+    // console.log(this.props.match.params.id)
     if(next.location.pathname!=this.props.location.pathname){
       this.getDate()
     }
     if (this.props.match.params.id == 'huawei') {
-      console.log(55)
+      // console.log(55)
     }
   }
   // 获取数据

@@ -2,7 +2,7 @@ import React from 'react';
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 import './ui.less';
 import {  NavLink} from 'react-router-dom';
-import store from '@/store/xb/index.js';
+// import store from '@/store/xb/index.js';
 
 
 class Footer extends React.Component{

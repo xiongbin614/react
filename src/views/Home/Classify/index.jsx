@@ -21,12 +21,12 @@ class Classify extends React.Component{
   }
   // 组件挂载之后
   componentDidMount(){
-    console.log(this.state.initdata)
+    // console.log(this.state.initdata)
   }
   // 点击切换
   toggle(val){
-    console.log(val)
-    console.log(this.state.data)
+    // console.log(val)
+    // console.log(this.state.data)
     this.setState({
       initdata:this.state.data.find(item=>{
         if(item.name===val){
@@ -53,7 +53,7 @@ class Classify extends React.Component{
         this.setState({
           data: tempArr
         })
-        console.log(this.state.data)
+        // console.log(this.state.data)
       }
     })
   }
@@ -72,7 +72,7 @@ class Classify extends React.Component{
             return item.name==="为您推荐"
           })
         })
-        console.log(this.state.data)
+        // console.log(this.state.data)
       }
     })
   }

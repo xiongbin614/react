@@ -17,19 +17,19 @@ class IndexConent extends React.Component{
   componentWillMount(){
     console.log(this.props.match.url)
     if (this.props.match.url ==='/index'){
-      console.log('666')
+      // console.log('666')
       axios.get('http://localhost:3005/getInfo/find').then(response=>{
         let data = response.data[0]
-        console.log(data)
+        // console.log(data)
       }).catch(error=>{
-        console.log(error)
+        // console.log(error)
       })
     }else{
-      console.log('555')
+      // console.log('555')
     }
   }
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="i-content">
           <div className="i-banner">

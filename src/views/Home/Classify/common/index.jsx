@@ -4,7 +4,7 @@ import {  NavLink} from 'react-router-dom';
 
 class Item extends React.Component{
   componentDidMount(){
-    console.log(this.props.initdata)
+    // console.log(this.props.initdata)
   }
   render(){
     return(

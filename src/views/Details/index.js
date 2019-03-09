@@ -19,7 +19,7 @@ class Details extends Component {
     // 1.获取urlid====》this.props.location.search.split('=')[1]
     // 2.将id存在仓库里面
     let id = this.props.location.search.split('=')[1];
-    console.log(id)
+    // console.log(id)
     // store.dispatch({
     //   type:"ADD_CART",
     //   id: this.props.location.search.split('=')[1]
@@ -31,9 +31,9 @@ class Details extends Component {
       // 存放localstage里面  158xxx000 [{id:xx,num:x}{}{}]
       if (localStorage.length>0){
         let arr = JSON.parse(localStorage.getItem(sessionStorage.getItem('name')))
-        console.log(arr)//数组
+        // console.log(arr)//数组
         for(var i=0;i<arr.length;i++){
-          console.log("akdjahfiahfjk")
+          // console.log("akdjahfiahfjk")
           if (Number(arr[i].id) === Number(id)){//j是id和num
             if (Number(arr[i].id) === Number(id)){
               let a = ++arr[i].num;
@@ -49,7 +49,7 @@ class Details extends Component {
             obj.id = Number(id);
             obj.num = 1;
             arr2.push(obj);
-            console.log("dididid")
+            // console.log("dididid")
             localStorage.setItem(sessionStorage.getItem('name'), JSON.stringify(arr2))
           }
         }
@@ -64,7 +64,7 @@ class Details extends Component {
   // 组件创建之前获取数据
   componentWillMount(){
     // 获取urlid
-    console.log(this.props.location.search.split('=')[1])
+    // console.log(this.props.location.search.split('=')[1])
     // 发送axios请求获取相关数据
     axios.get("http://localhost:3005/getInfo/moreinfo").then(res=>{
       // console.log(res.data[0].data)//所有的数组对象
@@ -79,7 +79,7 @@ class Details extends Component {
     })
   }
   add(){
-    console.log(this.state.data)
+    // console.log(this.state.data)
   }
   render() {
     return (
