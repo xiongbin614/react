@@ -12,14 +12,14 @@ class Login extends Component {
     this.submit=this.submit.bind(this)
   }
   componentDidMount(){
-    console.log(this.props)
+    // console.log(this.props)
   }
   // 点击登录
   submit(){
     let phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;
     let pwdReg = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/;//校验登录名：只能输入5-20个以字母开头、可带数字、“_”、“.”的字串
     if (phoneReg.test(Number(this.userinput.value)) && pwdReg.test(this.userpwd.value)){
-      console.log("输入正确")
+      // console.log("输入正确")
       this.setState({
         userName: this.userinput.value,
         passWord: this.userpwd.value
@@ -28,7 +28,7 @@ class Login extends Component {
         userName: this.userinput.value,
         passWord: this.userpwd.value
       }).then(res=>{
-        console.log(res.data.code)
+        // console.log(res.data.code)
         if(res.data.code===0){
           // alert("登录成功")
          this.props.history.goBack();
@@ -42,7 +42,7 @@ class Login extends Component {
 
     }else{
       console.log("输入有误")
-      alert("手机号或者密码错误")
+      // alert("手机号或者密码错误")
     }
   }
   // 跳转注册页面
@@ -59,10 +59,10 @@ class Login extends Component {
           </div>
           <div className="l-input">
               <div className="user">
-            <input type="text" name="user" ref={(el) => this.userinput = el} placeholder="手机号/邮箱地址/华为号" />
+            <input type="text" name="user" ref={(el) => this.userinput = el} placeholder="15880335203" />
               </div>
               <div className="pwd">
-            <input type="password" ref={(el) => this.userpwd = el} name="pwd" placeholder="密码" id=""/>
+            <input type="password" ref={(el) => this.userpwd = el} name="pwd" placeholder="xb123456" id=""/>
                 <i>8</i>
               </div>
               <div className="yzm">

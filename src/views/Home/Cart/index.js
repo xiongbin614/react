@@ -1,23 +1,105 @@
 import React from 'react';
 import './index.css';
 import Item from './common/item.jsx';
+import axios from "axios";
 // import { BrowserRouter, HashRouter, Route, Link, NavLink, Switch, Redirect } from 'react-router-dom';
 
 
 class Cart extends React.Component{
+    constructor(props){
+      super(props)
+      this.state={
+        data:[],
+        show:'',
+        list:[],
+        topShow:''
+      }
+    }
+    componentWillMount(){
+      if(sessionStorage.length==0){
+        localStorage.clear()
+      }
+      if(localStorage.length>0){
+        let local = JSON.parse(localStorage.getItem(sessionStorage.getItem("name")))
+        let temparr = []
+        for (var i = 0; i < local.length; i++) {
+          temparr.push(
+            local.find(item => {
+              if (local[i].id == Number(item.id)) {
+                return item
+              }
+            })
+          )
+        }
+        this.setState({
+          show:'xb-show',
+          topShow:'top-show',
+          data:temparr
+        })
+      }
+      // axios.get("http://localhost:3005/getInfo/moreinfo").then(res=>{
+      //   console.log(res.data[0].data)
+      //   var list=[];
+      //   for(var j=0;j<this.state.data.length;j++){
+      //     list.push(
+      //         res.data[0].data.find(items=>{
+      //                     if(Number(items.id)===this.state.data.id){
+      //                       return items
+      //                     }
+      //                   })
+      //     )
+          
+      //   }
+      //   this.setState({
+      //     list:list
+      //   })
+        
+      // })
+    }
+    componentDidMount(){
+      axios.get("http://localhost:3005/getInfo/moreinfo").then(res => {
+        // console.log(res.data[0].data)
+        var list = [];
+        for (var j = 0; j < this.state.data.length; j++) {
+          list.push(
+            res.data[0].data.find(items => {
+              if (Number(items.id) === this.state.data[j].id) {
+                return items
+              }
+            })
+          )
+
+        }
+        this.setState({
+          list: list
+        })
+
+      })
+    }
+    ad(){
+      // console.log(this.state.data)
+      // console.log(this.state.list)
+    }
   render(){
     return(
       <div className="A">
-        <header>购物车</header>
+        <header onClick={this.ad.bind(this)}>购物车</header>
         <div className="nav">
-          <div claName="kong">
+          <div className={"kong"+' '+this.state.topShow}>
             <p><i className="iconfont icon-gwc">购物车还没有商品赶紧选购吧！</i></p>
             <p><a href="#">去逛逛</a></p>
           </div>
-          <Item></Item>
-          <Item></Item>
-          <Item></Item>
-          {/* <div className="jiesuanFooter">
+          {
+            this.state.list.map(item=>{
+              return(
+                <Item data={item} key={item.id}></Item>
+              )
+            })
+          }
+          
+          {/* <Item></Item> */}
+          {/* <Item></Item> */}
+          {/* <div   className={" jiesuanFooter"+' '+this.state.show} id="hh" >
             <div className="check">
               <input type="checkbox" name="" id="" />全选
             </div>

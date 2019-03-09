@@ -6,33 +6,33 @@ import store from '@/store/xb/index.js';
 
 
 class Footer extends React.Component{
-  constructor(props){
-    super(props)
-    this.state=({
-      todos:'11'
-    })
-    store.subscribe(() => {
-      console.log('我变了，你做事吧');
-      this.setState({
-        todos: store.getState().age
-      })
-    })
-  }
+  // constructor(props){
+  //   super(props)
+  //   this.state=({
+  //     todos:'11'
+  //   })
+  //   store.subscribe(() => {
+  //     console.log('我变了，你做事吧');
+  //     this.setState({
+  //       todos: store.getState().age
+  //     })
+  //   })
+  // }
   
-  add(){
-    console.log(55)
-    store.dispatch({
-      type:"ADD",
-      text:"kkhhh"
-    })
-  }
+  // add(){
+  //   console.log(55)
+  //   store.dispatch({
+  //     type:"ADD",
+  //     text:"kkhhh"
+  //   })
+  // }
   render(){
     return (
         <div className="Footer">
             <div className="f-top">
-          <NavLink to="/login">登录{this.state.todos}</NavLink>
+          <NavLink to="/login">登录</NavLink>
           <i >|</i>
-          <span onClick={this.add.bind(this)}>反馈{store.getState().name}</span>
+          <span >反馈</span>
             </div>
             <div className="f-bottom">
               <ul className="f-touch">

@@ -3,6 +3,7 @@ let defaultState = {
   todos: [],
   name:'熊彬',
   age:"",
+  id:'',
   number:null
 }
 
@@ -14,6 +15,9 @@ let store = createStore((prevState = defaultState, action) => {
       break;
     case 'ADC':
       state.age=action.text
+      break;
+    case 'ADD_CART':
+      state.id = action.id
       break;
   }
   return state;

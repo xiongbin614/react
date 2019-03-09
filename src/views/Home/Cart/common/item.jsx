@@ -1,5 +1,6 @@
 import React from "react";
 import './itemx.less';
+import store from '@/store/xb/index.js';
 
 class Item extends React.Component{
     constructor(props){
@@ -7,7 +8,18 @@ class Item extends React.Component{
       this.state={
         number:1,
         result :0,
-        allChecked:false//复选框选中条件
+        show:"",
+        name: store.getState().name,
+        id: store.getState().id,
+        allChecked:false,//复选框选中条件
+        itemcheck:false
+      }
+    }
+    componentWillMount(){
+      if(localStorage.length>0){
+        this.setState({
+          show:'show'
+        })
       }
     }
     adc(){
@@ -17,36 +29,57 @@ class Item extends React.Component{
         })
         this.state.number--;
       }else{
-        console.log("不能再见里")
+        // console.log("不能再见里")
       }
     }
     add(){
       this.setState({
-        number:this.state.number+=1
+        number:this.state.number+=1,
+        result: this.state.number * Number(this.price.innerHTML.substr(1))
       })
+      // console.log(this.state.result)
     }
     // 全选
   allCheck(){
       this.setState({
         allChecked: !this.state.allChecked
       })
-    console.log("55")
+    if (this.state.allChecked){
+      this.setState({
+        itemcheck:true
+      })
+    }
+    // console.log("55")
+    // console.log(this.state.name)
+    // console.log(this.state.id)
   }
   // 选中单个
   selectedGoods(){
-
+    // console.log(this.state.number)
+    // console.log(Number(this.price.innerHTML.substr(1)))
+    this.setState({
+      itemcheck: !this.state.itemcheck
+    })
+    if (this.state.itemcheck){
+        this.setState({
+          result: this.state.number * Number(this.price.innerHTML.substr(1))
+        })
+    }
+    this.setState({
+      result: this.state.number * Number(this.price.innerHTML.substr(1))
+    })
   }
   render (){
     return (
       <div className="item">
         <div className="item-cont">
-          <input type="checkbox"  onChange={this.selectedGoods.bind(this)}/>
-          <img src="https://res.vmallres.com/pimages/product/6901443260225/428_428_1539222514790mp.png" alt=""/>
+          <input type="checkbox" checked={this.state.itemcheck}  onChange={this.selectedGoods.bind(this)}/>
+          <img src={"http://localhost:3005/" + this.props.data.img} alt=""/>
           <div className="names" >
-            <div className="top">华为p20</div>
+            <div className="top">{this.props.data.name}</div>
             <div className="bottom">
-              <div className="prices">
-               ￥3900
+              <div className="prices" ref={el=>this.price=el}>
+                {this.props.data.price}
               </div>
               <div className="jisuan">
                   <i onClick={this.adc.bind(this)}>-</i>
@@ -57,9 +90,9 @@ class Item extends React.Component{
           </div>
         </div>
       
-        <div className="jiesuanFooter">
+        <div className={" jiesuanFooter" + ' ' + this.state.show} id="hh" >
           <div className="check">
-            <input type="checkbox" checked={this.state.allChecked} onChange={this.allCheck.bind(this)} value="null"/>全选
+            <input type="checkbox" checked={this.state.allChecked} onChange={this.allCheck.bind(this)} name="" id="" />全选
             </div>
           <div className="result">
             <p>总计:</p>

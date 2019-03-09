@@ -37,7 +37,7 @@ class Register extends React.Component{
           userName: this.inputVal.value,
           passWord: this.mypwd.value
         }).then(res => {
-          console.log(res.data.code)
+          // console.log(res.data.code)
           if (res.data.code === 0) {
             setTimeout(() => {
               this.props.history.replace('/login')
@@ -46,7 +46,7 @@ class Register extends React.Component{
             alert("用户名或者密码错误ya ")
           }
         }).catch(err => {
-          console.log(err)
+          // console.log(err)
         })
         console.log("注册成功")
         this.setState({

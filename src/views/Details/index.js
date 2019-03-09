@@ -3,9 +3,84 @@ import 'antd-mobile/dist/antd-mobile.css';
 import React, { Component } from 'react';
 import './index.less';
 import { NavLink } from 'react-router-dom';
+import axios from "axios";
+import store from '@/store/xb/index.js';
+
 
 class Details extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      data:[]
+    }
+  }
+  // 添加购物车
+  addCart(){
+    // 1.获取urlid====》this.props.location.search.split('=')[1]
+    // 2.将id存在仓库里面
+    let id = this.props.location.search.split('=')[1];
+    console.log(id)
+    // store.dispatch({
+    //   type:"ADD_CART",
+    //   id: this.props.location.search.split('=')[1]
+    // })
+    // 没有登录不准加入购物车
+    if (sessionStorage.length===0){
+      this.props.history.push("/login")
+    }else{
+      // 存放localstage里面  158xxx000 [{id:xx,num:x}{}{}]
+      if (localStorage.length>0){
+        let arr = JSON.parse(localStorage.getItem(sessionStorage.getItem('name')))
+        console.log(arr)//数组
+        for(var i=0;i<arr.length;i++){
+          console.log("akdjahfiahfjk")
+          if (Number(arr[i].id) === Number(id)){//j是id和num
+            if (Number(arr[i].id) === Number(id)){
+              let a = ++arr[i].num;
+              let obj2={}
+              obj2.id = arr[i].id;
+              obj2.num=a;
+              arr.splice(i, 1, obj2);
+              localStorage.setItem(sessionStorage.getItem('name'), JSON.stringify(arr))
+            }
+          } else {
+            let arr2 = JSON.parse(localStorage.getItem(sessionStorage.getItem('name')));
+            let obj = {};
+            obj.id = Number(id);
+            obj.num = 1;
+            arr2.push(obj);
+            console.log("dididid")
+            localStorage.setItem(sessionStorage.getItem('name'), JSON.stringify(arr2))
+          }
+        }
+      }else{
+        localStorage.setItem(sessionStorage.getItem('name'), '[{"id":' + Number(id) + ',"num":1}]')
+      }
+    }
+    
+  }
 
+
+  // 组件创建之前获取数据
+  componentWillMount(){
+    // 获取urlid
+    console.log(this.props.location.search.split('=')[1])
+    // 发送axios请求获取相关数据
+    axios.get("http://localhost:3005/getInfo/moreinfo").then(res=>{
+      // console.log(res.data[0].data)//所有的数组对象
+      // 查找与urlid相匹配的
+      this.setState({
+        data: res.data[0].data.find(item=>{
+          if (this.props.location.search.split('=')[1]===item.id){
+            return item
+          }
+        })
+      })
+    })
+  }
+  add(){
+    console.log(this.state.data)
+  }
   render() {
     return (
       <div className="details" >
@@ -32,7 +107,7 @@ class Details extends Component {
                   infinite
                   dots={true}
                 >
-                  <img src="https://res.vmallres.com/pimages//display/10086785341226/428_428_a_mobile1551928412884.png" alt="" />
+                   <img src={"http://localhost:3005/"+this.state.data.img} alt="" />
                   <img src="https://res.vmallres.com/pimages//product/6901443232826//428_428_1523952750584mp.jpg" alt="" />
                   <img src="https://res.vmallres.com/pimages//product/6901443232826/group//428_428_1523952751001.jpg" alt="" />
                   <img src="https://res.vmallres.com/pimages//product/6901443232826/group//428_428_1523952751002.jpg" alt=""/>
@@ -48,10 +123,10 @@ class Details extends Component {
 
         <div className="xqy-mian">
           <div className="money">
-          <p>￥2199</p>
+          <p onClick={this.add.bind(this)}>{this.state.data.price}</p>
           </div>
           <div className="xqy-xx">
-            <p className="xqy-xiakuan-0">荣耀10 GT游戏加速 AIS手持夜景 AI摄影手机 6GB+64GB 幻影蓝 全网通 双卡双待 荣耀10GT</p>
+            <p className="xqy-xiakuan-0">{this.state.data.name} {this.state.data.describe}</p>
           </div>
           <div className="p-promotion j_pro-skuPromWord">
             <div className="j_pagetimerPromWord"><a href="https://m.vmall.com/product/10086619433759.html"><div>【华为智慧生活节】购机赠小天鹅蓝牙音箱，享6期免息。老用户购机享一年官方碎屏险，老用户专属购机通道点击&gt;&gt;&gt;</div></a></div>
@@ -282,7 +357,7 @@ class Details extends Component {
               <span>购物车</span>
             </NavLink>
             <div className="xqy-footer-gm">
-              <div className="gm-l">加入购物车</div>
+              <div className="gm-l" onClick={this.addCart.bind(this)}>加入购物车</div>
               <div className="gm-r">立即购买</div>
             </div>
         </div>

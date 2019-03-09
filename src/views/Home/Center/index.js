@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 import imgURL from '@/center-images/img01.png';
 import {NavLink} from 'react-router-dom';
-import { Carousel, WingBlank, Button } from 'antd-mobile';//轮播图插件
 import 'antd-mobile/dist/antd-mobile.css';
 
 
@@ -11,6 +10,7 @@ class Center extends React.Component{
             super(props)
             this.state={
                 userName:'登录/注册',
+                ff: sessionStorage.getItem("name")
             }
         }
     componentWillMount(){
@@ -19,12 +19,16 @@ class Center extends React.Component{
             userName: sessionStorage.length ? sessionStorage.getItem("name") : '登录/注册'
         })
         if (sessionStorage.length>0){
-
+            
         }
     }    
     login(e){
         if (sessionStorage.length>0){
-            console.log(55555)
+            sessionStorage.clear()
+            this.props.history.replace('/center')
+            this.setState({
+                ff:'55'
+            })
             e.preventDefault()
         }
     }

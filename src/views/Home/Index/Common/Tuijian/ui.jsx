@@ -110,8 +110,8 @@ class IndexConent extends React.Component{
                   <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt=""/>
                     <p>11</p>
                   </div>
-                  <p className="p-name">荣耀9</p>
-                  <p className="p-price">￥3200</p>
+                  <p className="p-names">荣耀9</p>
+                  <p className="p-price">￥320000</p>
                 </li>
               <li>
                 <div className="tj-img">
@@ -119,7 +119,7 @@ class IndexConent extends React.Component{
                   <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
                   <p>11</p>
                 </div>
-                <p className="p-name">荣耀9</p>
+                <p className="p-names">荣耀9</p>
                 <p className="p-price">￥3200</p>
               </li>
               <li>
@@ -128,7 +128,7 @@ class IndexConent extends React.Component{
                   <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
                   <p>11</p>
                 </div>
-                <p className="p-name">荣耀9</p>
+                <p className="p-names">荣耀9</p>
                 <p className="p-price">￥3200</p>
               </li>
               <li>
@@ -137,7 +137,7 @@ class IndexConent extends React.Component{
                   <img src="https://res.vmallres.com/pimages//product/6901443269723/428_428_1540895297253mp.png" alt="" />
                   <p>11</p>
                 </div>
-                <p className="p-name">荣耀9</p>
+                <p className="p-names">荣耀9</p>
                 <p className="p-price">￥3200</p>
               </li>
               </ul>
